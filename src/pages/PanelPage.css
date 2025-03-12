@@ -1,0 +1,258 @@
+.panel-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 10px;
+  margin: 15px 0;
+  cursor: pointer;
+  background: #34495e;
+  text-align: center;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #1abc9c;
+  text-decoration: none;
+  color: white;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background: #ecf0f1;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filters label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.filters select,
+.filters input {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.filters input[type="text"] {
+  flex: 1;
+  max-width: 300px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+.complaints-list {
+  border: 1px solid #ccc;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.complaint-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.complaint-item:hover {
+  background: #eaeaea;
+  transform: scale(1.02);
+}
+
+.complaint-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.complaint-details {
+  border: 1px solid #ccc;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-details h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.complaint-details p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.complaint-details strong {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.complaint-details button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.complaint-details button:hover {
+  background: #333333;
+}
+
+.actions {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background: #1abc9c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.actions button:hover {
+  background: #16a085;
+}
+/* Overlay for dimming background */
+.media-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container */
+.media-popup {
+  position: relative;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Media in the popup */
+.media-popup img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.ai-analysis-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 100%;
+  max-width: 950px; /* Adjust this to control the max width of the container */
+  margin: 20px auto; /* Centers the container horizontally */
+}
+
+.ai-analysis-container h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.ai-analysis-container p {
+  margin: 15px 0;
+  padding-top: 10px;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.ai-analysis-container p strong {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+
+
+
